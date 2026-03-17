@@ -1,19 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { X, MessageCircle } from './Icons';
+import { X, Mail } from './Icons';
 
 interface ContactOptionsModalProps {
   onClose: () => void;
-  phoneNumber: string; // e.g., "5129752930"
+  email: string;
 }
 
-export function ContactOptionsModal({ onClose, phoneNumber }: ContactOptionsModalProps) {
-  
+export function ContactOptionsModal({ onClose, email }: ContactOptionsModalProps) {
+
   const options = [
     {
-      label: 'Text',
-      icon: MessageCircle,
-      href: `sms:${phoneNumber}`,
+      label: 'Email',
+      icon: Mail,
+      href: `mailto:${email}`,
       color: 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400 border-blue-200 dark:border-blue-500/30',
       delay: 0.1
     }

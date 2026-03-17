@@ -4,14 +4,12 @@ import { FadeIn } from './components/FadeIn';
 import { LinkCard } from './components/LinkCard';
 import { ContactForm } from './components/ContactForm';
 import { ContactOptionsModal } from './components/ContactOptionsModal';
-import { UpdatesModal } from './components/UpdatesModal';
 import { linksData, HEADSHOT_URL } from './constants';
-import { Church, Heart, Settings, ArrowUpRight, MessageCircle } from './components/Icons';
+import { Church, Heart, Settings, ArrowUpRight, Mail } from './components/Icons';
 
 export default function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
-  const [isUpdatesOpen, setIsUpdatesOpen] = useState(false);
   const donationSectionRef = useRef<HTMLDivElement>(null);
 
   const handleGiveClick = () => {
@@ -52,7 +50,7 @@ export default function App() {
             <div className="relative aspect-square w-full rounded-3xl overflow-hidden ring-1 ring-zinc-200 dark:ring-white/10 shadow-xl dark:shadow-2xl bg-zinc-100 dark:bg-black group">
               <img
                 src={HEADSHOT_URL}
-                alt="Sophia Cyr"
+                alt="Trung Nguyên"
                 className="w-full h-full object-cover object-[center_25%] scale-105 group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -60,7 +58,7 @@ export default function App() {
               {/* Tag */}
               <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/90 dark:bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-sm ring-1 ring-black/5 dark:ring-white/10 shadow-sm">
                 <Church className="w-3 h-3 text-zinc-700 dark:text-white/70" />
-                <span className="font-ui text-[10px] tracking-widest uppercase text-zinc-800 dark:text-white/90">Missionary</span>
+                <span className="font-ui text-[10px] tracking-widest uppercase text-zinc-800 dark:text-white/90">Lead Developer</span>
               </div>
             </div>
           </FadeIn>
@@ -68,11 +66,11 @@ export default function App() {
           {/* Profile Info - Reduced margin top */}
           <FadeIn delay={0.1} duration={0.7} className="mt-6 pl-2">
             <h1 className="font-heading text-5xl font-bold uppercase leading-[0.9] text-zinc-900 dark:text-white tracking-tight">
-              Sophia<br/>Cyr
+              Trung<br/>Nguyên
             </h1>
             <div className="mt-4 space-y-1">
               <p className="font-ui text-xs tracking-[0.2em] uppercase text-zinc-500 dark:text-zinc-400">
-                Animation Lead / Missionary
+                Lead Developer
               </p>
                <p className="font-body text-sm text-zinc-600 dark:text-zinc-500 leading-relaxed max-w-xs">
                 Serving with Divine Creative Ministries. 501c(3) Non-Profit Organization.
@@ -94,7 +92,7 @@ export default function App() {
               aria-label="Contact Options"
               className="flex items-center justify-center w-14 h-14 rounded-full bg-white dark:bg-white/5 ring-1 ring-zinc-200 dark:ring-white/10 hover:bg-zinc-50 dark:hover:bg-white/10 transition-all duration-300 text-zinc-900 dark:text-white shadow-lg dark:shadow-none"
             >
-              <MessageCircle className="w-5 h-5" />
+              <Mail className="w-5 h-5" />
             </button>
           </FadeIn>
         </div>
@@ -114,12 +112,6 @@ export default function App() {
                   key={link.id} 
                   link={link} 
                   index={i} 
-                  onClick={(e) => {
-                    if (link.id === 'updates') {
-                      e.preventDefault();
-                      setIsUpdatesOpen(true);
-                    }
-                  }}
                 />
               ))}
              </div>
@@ -141,7 +133,7 @@ export default function App() {
               <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-[#0a0a0a] ring-1 ring-zinc-200 dark:ring-white/10 shadow-2xl h-[600px]">
                  <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
                  <iframe
-                    src="https://subsplash.com/u/-FD5WMN/give?fund_id=b76a7eba-9af9-4dc2-8d1d-9de0e3aa8b15&frequency=monthly&embed=true"
+                    src="https://subsplash.com/u/-FD5WMN/give?fund_id=72fe22bd-6a81-4291-a86d-3c2a10b7dea9&frequency=monthly&embed=true"
                     className="relative z-10 w-full h-full"
                     frameBorder="0"
                     title="Donation Form"
@@ -169,10 +161,9 @@ export default function App() {
               <h2 className="font-heading text-xl uppercase tracking-wide text-zinc-900 dark:text-white mb-6 px-2">Personal Contact Info</h2>
               <div className="px-2">
                 <div className="flex flex-col gap-3">
-                   <p className="font-heading text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-white">Sophia Cyr</p>
+                   <p className="font-heading text-sm font-bold uppercase tracking-widest text-zinc-900 dark:text-white">Trung Nguyên</p>
                    <div className="flex flex-col gap-1">
-                    <a href="tel:9037071107" className="font-ui text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">903.707.1107</a>
-                    <a href="mailto:sophia@divinecreative.org" className="font-ui text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">sophia@divinecreative.org</a>
+                    <a href="mailto:hello@divinecreative.org" className="font-ui text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">hello@divinecreative.org</a>
                    </div>
                 </div>
               </div>
@@ -192,12 +183,11 @@ export default function App() {
       <AnimatePresence>
         {isFormOpen && <ContactForm onClose={() => setIsFormOpen(false)} />}
         {isContactMenuOpen && (
-          <ContactOptionsModal 
-            onClose={() => setIsContactMenuOpen(false)} 
-            phoneNumber="9037071107"
+          <ContactOptionsModal
+            onClose={() => setIsContactMenuOpen(false)}
+            email="hello@divinecreative.org"
           />
         )}
-        {isUpdatesOpen && <UpdatesModal onClose={() => setIsUpdatesOpen(false)} />}
       </AnimatePresence>
     </div>
   );
