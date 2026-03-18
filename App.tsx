@@ -116,7 +116,29 @@ export default function App() {
               ))}
              </div>
           </div>
-        
+
+          {/* Video Section */}
+          <div>
+            <div className="mb-6 flex items-end gap-4 px-2">
+              <h2 className="font-heading text-2xl uppercase tracking-wide text-zinc-900 dark:text-white/90">Watch</h2>
+              <div className="h-[1px] flex-1 bg-zinc-200 dark:bg-white/10 mb-2"></div>
+            </div>
+            <FadeIn delay={0.5} duration={0.7}>
+              <div className="relative overflow-hidden rounded-3xl bg-black ring-1 ring-zinc-200 dark:ring-white/10 shadow-2xl">
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/8eN7bsNePS4"
+                    className="absolute inset-0 w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="YouTube Video"
+                  ></iframe>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
           {/* Donation Section */}
           <div ref={donationSectionRef} className="scroll-mt-24">
             <FadeIn delay={0.66} duration={0.7}>
