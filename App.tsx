@@ -127,7 +127,7 @@ export default function App() {
               <div className="relative overflow-hidden rounded-3xl bg-black ring-1 ring-zinc-200 dark:ring-white/10 shadow-2xl">
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                   <iframe
-                    src="https://www.youtube.com/embed/8eN7bsNePS4"
+                    src="https://www.youtube.com/embed/fIlJsWKZ7lk"
                     className="absolute inset-0 w-full h-full"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
