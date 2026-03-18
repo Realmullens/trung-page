@@ -77,7 +77,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({ link, index, onClick }) => {
             rotateY,
             transformStyle: "preserve-3d",
           }}
-          className="group relative flex items-center gap-5 w-full p-5 bg-white dark:bg-[#111] ring-1 ring-zinc-200 dark:ring-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:ring-zinc-300 dark:hover:ring-white/20 shadow-sm dark:shadow-none"
+          className="group relative flex items-center gap-3 md:gap-5 w-full p-4 md:p-5 bg-white dark:bg-[#111] ring-1 ring-zinc-200 dark:ring-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:ring-zinc-300 dark:hover:ring-white/20 shadow-sm dark:shadow-none"
         >
             {/* Background noise overlay */}
             <div className="absolute inset-0 opacity-[0.07] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none" />
@@ -93,7 +93,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({ link, index, onClick }) => {
             <p className="font-ui text-[10px] tracking-widest text-zinc-500 truncate mt-0.5 group-hover:text-zinc-600 dark:group-hover:text-zinc-400 transition-colors">{link.url}</p>
           </div>
           
-          <div style={{ transform: "translateZ(20px)" }} className="relative z-10">
+          <div style={{ transform: "translateZ(20px)" }} className="relative z-10 hidden md:block flex-shrink-0">
             <div className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-white/5 ring-1 ring-zinc-200 dark:ring-white/10 group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all duration-300">
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:-rotate-45" />
             </div>
