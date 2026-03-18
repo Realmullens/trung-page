@@ -108,15 +108,35 @@ export default function App() {
              </div>
              <div className="grid gap-3">
               {linksData.map((link, i) => (
-                <LinkCard 
-                  key={link.id} 
-                  link={link} 
-                  index={i} 
+                <LinkCard
+                  key={link.id}
+                  link={link}
+                  index={i}
                 />
               ))}
              </div>
           </div>
-        
+
+          {/* Video Section */}
+          <div>
+            <FadeIn delay={0.5} duration={0.7}>
+              <div className="mb-6 flex items-end gap-4 px-2">
+                <h2 className="font-heading text-2xl uppercase tracking-wide text-zinc-900 dark:text-white/90">Learn More</h2>
+                <div className="h-[1px] flex-1 bg-zinc-200 dark:bg-white/10 mb-2"></div>
+              </div>
+              <div className="relative overflow-hidden rounded-3xl ring-1 ring-zinc-200 dark:ring-white/10 shadow-xl aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/fIlJsWKZ7lk"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Learn more about Trung"
+                ></iframe>
+              </div>
+            </FadeIn>
+          </div>
+
           {/* Donation Section */}
           <div ref={donationSectionRef} className="scroll-mt-24">
             <FadeIn delay={0.66} duration={0.7}>
