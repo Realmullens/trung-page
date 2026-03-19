@@ -32,6 +32,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
       initial={{ opacity: 0, y: yOffset }}
       transition={{ duration, delay, ease: [0.25, 0.4, 0.25, 1] }}
       className={className}
+      style={{ maxWidth: '100%', overflow: 'hidden' }}
       {...animationTriggerProps}
     >
       {children}

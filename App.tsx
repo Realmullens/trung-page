@@ -106,7 +106,7 @@ export default function App() {
                 <h2 className="font-heading text-2xl uppercase tracking-wide text-zinc-900 dark:text-white/90">Directory</h2>
                 <div className="h-[1px] flex-1 bg-zinc-200 dark:bg-white/10 mb-2"></div>
              </div>
-             <div className="grid gap-3">
+             <div className="grid gap-3 overflow-hidden">
               {linksData.map((link, i) => (
                 <LinkCard
                   key={link.id}
