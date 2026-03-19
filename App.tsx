@@ -20,7 +20,7 @@ export default function App() {
     <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black font-body overflow-x-hidden transition-colors duration-300">
       
       {/* Cinematic Dark Background & Texture - Visible only in Dark Mode */}
-      <div className="fixed inset-0 z-[-1] hidden dark:block">
+      <div className="fixed inset-0 z-[-1] hidden dark:block overflow-hidden">
          {/* Video Background with heavy overlay */}
         <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-40 scale-105">
           <source
