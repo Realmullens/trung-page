@@ -17,7 +17,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black font-body transition-colors duration-300" style={{ overflowX: 'clip' }}>
+    <div className="min-h-screen bg-zinc-50 dark:bg-black text-zinc-900 dark:text-white selection:bg-zinc-900 selection:text-white dark:selection:bg-white dark:selection:text-black font-body transition-colors duration-300">
       
       {/* Cinematic Dark Background & Texture - Visible only in Dark Mode */}
       <div className="fixed inset-0 z-[-1] hidden dark:block overflow-hidden">
@@ -39,7 +39,7 @@ export default function App() {
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
        </div>
       
-      <main className="relative w-full px-4 py-12 md:max-w-6xl md:mx-auto md:flex md:gap-12 md:items-start md:py-20" style={{ maxWidth: '100%', boxSizing: 'border-box' }}>
+      <main className="relative w-full px-4 py-12 md:max-w-6xl md:mx-auto md:flex md:gap-12 md:items-start md:py-20">
         
         {/* Left Column: Profile (Sticky on Desktop) */}
         <div className="md:w-1/3 md:sticky md:top-24 flex flex-col">
