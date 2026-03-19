@@ -22,7 +22,7 @@ export default function App() {
       {/* Cinematic Dark Background & Texture - Visible only in Dark Mode */}
       <div className="fixed inset-0 z-[-1] hidden dark:block overflow-hidden">
          {/* Video Background with heavy overlay */}
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-40 scale-105">
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover opacity-40">
           <source
             src="https://videos.pexels.com/video-files/32399542/13820720_2560_1440_30fps.mp4"
             type="video/mp4"
@@ -51,7 +51,7 @@ export default function App() {
               <img
                 src={HEADSHOT_URL}
                 alt="Trung Nguyên"
-                className="w-full h-full object-cover object-[center_25%] scale-105 group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
