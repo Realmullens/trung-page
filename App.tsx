@@ -39,7 +39,7 @@ export default function App() {
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
        </div>
       
-      <main className="relative w-full max-w-full px-4 py-12 md:max-w-6xl md:mx-auto md:flex md:gap-12 md:items-start md:py-20 overflow-hidden">
+      <main className="relative w-full px-4 py-12 md:max-w-6xl md:mx-auto md:flex md:gap-12 md:items-start md:py-20">
         
         {/* Left Column: Profile (Sticky on Desktop) */}
         <div className="md:w-1/3 md:sticky md:top-24 flex flex-col">
@@ -98,7 +98,7 @@ export default function App() {
         </div>
 
         {/* Right Column: Content (Scrollable) */}
-        <div className="mt-12 md:mt-0 md:w-2/3 space-y-16 w-full min-w-0 overflow-hidden">
+        <div className="mt-12 md:mt-0 md:w-2/3 space-y-16 min-w-0">
           
           {/* Links Section */}
           <div>

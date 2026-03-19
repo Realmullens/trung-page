@@ -25,7 +25,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({ link, index, onClick }) => {
         onClick={onClick}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center gap-3 md:gap-5 w-full p-4 md:p-5 bg-white dark:bg-[#111] ring-1 ring-zinc-200 dark:ring-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:ring-zinc-300 dark:hover:ring-white/20 shadow-sm dark:shadow-none"
+        className="group relative flex items-center gap-3 md:gap-5 w-full p-4 md:p-5 bg-white dark:bg-[#111] ring-1 ring-inset ring-zinc-200 dark:ring-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:ring-zinc-300 dark:hover:ring-white/20 shadow-sm dark:shadow-none"
       >
           {/* Background noise overlay */}
           <div className="absolute inset-0 opacity-[0.07] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none" />
